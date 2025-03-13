@@ -1,0 +1,23 @@
+name: Lint HTML Files
+
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run Super Linter (HTML Only)
+        uses: super-linter/super-linter@v5
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_HTML: true
+          VALIDATE_CSS: false
+          VALIDATE_JAVASCRIPT: false
+          VALIDATE_MARKDOWN: false
+          VALIDATE_JSON: false
+
