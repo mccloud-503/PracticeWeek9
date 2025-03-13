@@ -14,8 +14,3 @@ jobs:
         env:
           VALIDATE_ALL_CODEBASE: false
           VALIDATE_HTML: true
-          VALIDATE_CSS: false
-          VALIDATE_JAVASCRIPT: false
-          VALIDATE_MARKDOWN: false
-          VALIDATE_JSON: false
-
