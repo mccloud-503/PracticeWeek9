@@ -12,5 +12,7 @@ jobs:
       - name: Run Super Linter (HTML Only)
         uses: super-linter/super-linter@v5
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # ✅ Fix authentication issue
           VALIDATE_ALL_CODEBASE: false
           VALIDATE_HTML: true
+          DEFAULT_BRANCH: main 
